@@ -51,6 +51,7 @@ module.exports = function(config) {
   });
 
   if (process.env.TRAVIS) {
+    config.test = 0
     config.sauceLabs.startConnect = false;
     config.transports = ['polling'];
     config.browsers = [process.env.BROWSER];
